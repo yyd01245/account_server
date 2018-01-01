@@ -3,7 +3,7 @@ const router = express.Router();
 const wechat = require('wechat');
 
 let config = {
-    token: 'wxexpress',
+    token: '',
     appid: "",
     appsecret: '',
     encodingAESKey: ''
@@ -12,6 +12,8 @@ let config = {
 router.use(express.query());
 
 router.use('/', wechat(config, function(req, res, next) {
+    console.log('--- yyd log wechat');
+
     console.log(req.weixin);
     var message = req.weixin;
 
