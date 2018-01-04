@@ -4,7 +4,8 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var wechat = require('wechat');
+var wechat = require('./routes/wechat');
+
 
 var index = require('./routes/index');
 var users = require('./routes/users');
